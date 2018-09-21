@@ -4,10 +4,10 @@
 
 static void selsort(char **arr, int n)
 {
-	typeof(*arr) *p, *q, *min, tmp;
+	typeof(*arr) *p, *q, *min, tmp, *end = arr+n;
 
-	for (p = arr; p < arr+n-1; p++) {
-		for (min = p, q = p+1; q < arr+n; q++) {
+	for (p = arr; p < end-1; p++) {
+		for (min = p, q = p+1; q < end; q++) {
 			if (strcmp(*min, *q) > 0)
 				min = q;
 			}
